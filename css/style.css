@@ -1,0 +1,149 @@
+/* --- COLOR PALETTE --- */
+:root {
+  --dark-green: #112B1D;
+  --soft-green: #9CC97F;
+  --gray-green: #537E72;
+  --light-bg: #CDDECB;
+  --soft-blue: #90B7BF;
+  --pale-blue: #CAE2E7;
+  --text-color: #112B1D;
+}
+
+/* --- RESET & BASE --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--text-color);
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  background-color: var(--gray-green);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--soft-green);
+}
+
+.lang-toggle {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.lang-toggle a {
+  color: var(--pale-blue);
+  text-decoration: none;
+}
+
+.lang-toggle a.active {
+  color: var(--soft-green);
+}
+
+/* --- HERO --- */
+.hero {
+  background: linear-gradient(to bottom, rgba(17,43,29,0.5), rgba(17,43,29,0.8)),
+              url('../images/hero-europe.jpg') center/cover no-repeat;
+  color: white;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--pale-blue);
+}
+
+.hero p {
+  max-width: 600px;
+  font-size: 1.1rem;
+}
+
+/* --- DESTINATIONS --- */
+.destinations {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--pale-blue);
+}
+
+.destinations h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--dark-green);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background-color: var(--light-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(17,43,29,0.2);
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h4 {
+  padding: 1rem;
+  color: var(--gray-green);
+  font-size: 1.1rem;
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: var(--gray-green);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
