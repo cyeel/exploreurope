@@ -23,7 +23,7 @@ document.querySelectorAll(".festival").forEach(day => {
             👗 Salah satu acara mode paling bergengsi di dunia.`;
         break;
       case "estateromana":
-        popupImage.src = "img/estateromana.webp";
+        popupImage.src = "img/estateromana.jpg";
         popupImage.style.width = "300px"; 
         popupImage.style.borderRadius = "10px"; 
         popupTitle.textContent = "Estate Romana (Festival Musim Panas Romawi)";
@@ -65,3 +65,4 @@ popup.addEventListener("click", e => {
 
 //tombol x buat nutup
 closeBtn.addEventListener("click", () => popup.style.display = "none");
+
