@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exploreurope</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Exploreurope</h1>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="events.html">Acara & Festival</a></li>
+        <li><a href="itinerary.html">Rencana Perjalanan</a></li>
+        <li><a href="weather.html">Cuaca & Musim</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+      <div class="lang-toggle">
+        <a href="index.html" class="active">ID</a> | 
+        <a href="index-en.html">EN</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="vid/europe.mp4" type="video/mp4">
+  </video>
+  <div class="hero-content">
+    <h1>Jelajahi Keindahan Eropa</h1>
+    <p>Destinasi terbaik pilihan kami!</p>
+  </div>
+</section>
+
+  <!-- DESTINATION HIGHLIGHTS -->
+  <section class="destinations">
+    <h2>5 Destinasi Terbaik</h2><br>
+
+    <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="img/paris.jpg" alt="Paris, France">
+        <h3>Paris, Prancis</h3>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/rome.jpg" alt="Rome, Italy">
+        <h3>Roma, Italia</h3>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/amsterdem.jpg" alt="Amsterdam, Netherlands">
+        <h3>Amsterdam, Belanda</h3>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/barcelona.webp" alt="Barcelona, Spain">
+        <h3>Barcelona, Spanyol</h3>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/zurich.jpg" alt="Zurich, Switzerland">
+        <h3>Zurich, Swizz</h3>
+      </div>
+    </div>
+
+    <!-- Tombol navigasi -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; oleh Ell36</p>
+  </footer>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
