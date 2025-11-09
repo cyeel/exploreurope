@@ -1,0 +1,195 @@
+
+/* ---------- Variables (use same palette as project) ---------- */
+:root{
+  --dark-green: #112B1D;
+  --soft-green: #9CC97F;
+  --gray-green: #537E72;
+  --light-bg: #CDDECB;
+  --soft-blue: #90B7BF;
+  --pale-blue: #CAE2E7;
+  --text-color: #112B1D;
+  --white: #ffffff;
+}
+
+/* ---------- Reset / Base ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--pale-blue);
+  color: var(--text-color);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- NAVBAR (uses existing HTML structure) ---------- */
+header {
+  background: var(--gray-green);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+ 
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px; /* 🔹 tambah tinggi dari sebelumnya */
+  gap: 16px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.logo-img {
+  width: 48px; /* 🔹 sedikit diperbesar supaya proporsional */
+  height: auto;
+  display: block;
+}
+.nav-links { list-style: none; display:flex; gap:18px; align-items:center; }
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 8px;
+  transition: color .18s, background .18s;
+  border-radius: 6px;
+}
+.nav-links a:hover { color: var(--soft-green); background: rgba(255,255,255,0.03); }
+.nav-links a.active { color: var(--soft-green); }
+.lang-toggle { color: var(--white); font-size:0.95rem; }
+
+/* ---------- HERO (big image + overlay content) ---------- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 48vh;
+  min-height: 280px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.66);
+  transform-origin: center;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 1rem 1.25rem;
+  color: var(--white);
+}
+.hero-content h1 {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  margin-bottom: 0.35rem;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  line-height: 1.05;
+}
+.hero-content p {
+  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+  color: rgba(255,255,255,0.95);
+}
+
+/* ---------- MAIN CONTENT CONTAINER ---------- */
+.container {
+  max-width: 980px;
+  margin: 34px auto;
+  background: var(--white);
+  padding: 34px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(17,43,29,0.06);
+}
+
+/* head for sections */
+.container h2 {
+  font-size: 1.6rem;
+  color: var(--dark-green);
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 12px;
+}
+.container h2::before {
+  content: "";
+  width: 6px;
+  height: 100%;
+  background: var(--soft-green);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 3px;
+}
+
+/* paragraphs and lists */
+.container p {
+  margin-bottom: 14px;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+.container ul {
+  margin: 8px 0 14px 20px;
+  padding: 0;
+}
+.container ul li {
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+/* emphasis / strong */
+.container strong { color: var(--dark-green); }
+
+/* small typographic helpers */
+.container em { font-style: italic; color: rgba(0,0,0,0.75); }
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: var(--gray-green);
+  color: var(--white);
+  text-align: center;
+  padding: 18px 12px;
+  margin-top: 30px;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+}
+
+/* ---------- Utility classes (if needed) ---------- */
+.center { text-align: center; }
+.lead { font-size: 1.08rem; color: rgba(0,0,0,0.8); }
+
+/* ---------- Itinerary modal image helper (reused if modal used) ---------- */
+.itinerarydalampopup {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  margin: 0 auto 14px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .navbar { padding: 12px 14px; }
+  .logo { font-size: 1.05rem; }
+  .hero { height: 38vh; }
+  .container { margin: 22px 16px; padding: 22px; }
+  .hero-content h1 { font-size: 1.9rem; }
+}
+
+@media (max-width: 480px) {
+  .nav-links { display: none; } /* keep navbar simple on tiny screens */
+  .hero { height: 34vh; }
+  .hero-content h1 { font-size: 1.5rem; }
+  .container { padding: 18px; }
+}

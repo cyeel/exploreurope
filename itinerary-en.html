@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Itinerary | Exploreurope</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/itinerary.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">
+        <a href="index-en.html"><img src="img/logo.png" alt="Exploreurope Logo" class="logo-img"></a>
+        Exploreurope
+      </h1>
+      <ul class="nav-links">
+        <li><a href="index-en.html">Home</a></li>
+        <li><a href="events-en.html">Events and Festivals</a></li>
+        <li><a href="itinerary-en.html" class="active">Itinerary</a></li>
+        <li><a href="contact-en.html">Contact</a></li>
+      </ul>
+      <div class="lang-toggle">
+        <a href="itinerary.html">ID</a> | 
+        <a href="itinerary-en.html" class="active">EN</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- DAY SELECTION -->
+  <section class="itinerary-select">
+    <h2>How many days will you stay?</h2>
+    <div class="day-buttons">
+      <button data-days="2">2 Days</button>
+      <button data-days="3">3 Days</button>
+      <button data-days="4">4 Days</button>
+    </div>
+  </section>
+
+  <!-- ITINERARY LIST -->
+  <section class="itinerary-list" id="itineraryList"></section>
+
+  <!-- DETAIL POPUP -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalImage" alt="">
+      <h3 id="modalTitle"></h3>
+      <p id="modalLocation"></p>
+      <p id="modalHotel"></p>
+      <p id="modalCost"></p>
+      <p id="modalTransport"></p>
+    </div>
+  </div>
+
+  <script src="js/itinerary-en.js"></script>
+</body>
+</html>

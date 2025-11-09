@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rencana Perjalanan | Exploreurope</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/itinerary.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Logo Exploreurope" class="logo-img"></a>
+        Exploreurope
+      </h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="events.html">Acara & Festival</a></li>
+        <li><a href="itinerary.html" class="active">Rencana Perjalanan</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+      <div class="lang-toggle">
+        <a href="index.html" class="active">ID</a> | 
+        <a href="index-en.html">EN</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+  <!-- PILIHAN HARI -->
+  <section class="itinerary-select">
+    <h2>Berapa hari kamu akan tinggal?</h2>
+    <div class="day-buttons">
+      <button data-days="2">2 Hari</button>
+      <button data-days="3">3 Hari</button>
+      <button data-days="4">4 Hari</button>
+    </div>
+  </section>
+
+  <!-- DAFTAR ITINERARY -->
+  <section class="itinerary-list" id="itineraryList"></section>
+
+  <!-- POPUP DETAIL -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalImage" alt="">
+      <h3 id="modalTitle"></h3>
+      <p id="modalLocation"></p>
+      <p id="modalHotel"></p>
+      <p id="modalCost"></p>
+      <p id="modalTransport"></p>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    <p>&copy; Oleh Ell36</p>
+  </footer>
+
+
+
+  <script src="js/itinerary.js"></script>
+</body>
+</html>

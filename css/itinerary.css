@@ -1,0 +1,134 @@
+main {
+  min-height: 80vh; /* atau 100vh jika mau full layar */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+   background: linear-gradient(var(--pale-blue), var(--light-bg));
+}
+
+.itinerary-select {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.itinerary-select h2 {
+  color: var(--dark-green);
+  margin-bottom: 1.5rem;
+}
+
+.day-buttons button {
+  background-color: var(--gray-green);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.day-buttons button:hover {
+  background-color: var(--soft-green);
+  color: var(--dark-green);
+}
+
+/* GRID ITINERARY (centered) */
+.itinerary-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.itinerary-card {
+  background-color: var(--pale-blue);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 350px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.itinerary-card:hover {
+  transform: scale(1.03);
+}
+
+.itinerary-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.itinerarydalampopup {
+  width: 60%;
+  max-width: 200px;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+
+.itinerary-card .content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.itinerary-card h3 {
+  color: var(--dark-green);
+  margin-bottom: 0.5rem;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: var(--light-bg);
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 600px;
+  text-align: left;
+  position: relative;
+  animation: popIn 0.25s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.modal-content h3 {
+  color: var(--dark-green);
+  margin-bottom: 1rem;
+}
+
+.modal-content h4 {
+  color: var(--gray-green);
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

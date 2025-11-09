@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Exploreurope</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">
+        <a href="index-en.html"><img src="img/logo.png" alt="Exploreurope Logo" class="logo-img"></a>
+        Exploreurope
+      </h1>
+      <ul class="nav-links">
+        <li><a href="index-en.html">Home</a></li>
+        <li><a href="events-en.html">Events and Festivals</a></li>
+        <li><a href="itinerary-en.html">Itinerary</a></li>
+        <li><a href="contact-en.html" class="active">Contact</a></li>
+      </ul>
+      <div class="lang-toggle">
+        <a href="contact.html">ID</a> | 
+        <a href="contact-en.html" class="active">EN</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="container">
+      <h2>About This Website</h2>
+      <p class="intro">
+        Exploreurope was created as a digital space for travelers and learners who wish to explore the beauty, culture, and diversity of Europe.
+        This website aims to inspire you to plan meaningful trips. Whether for study, vacation, or cultural exchange.
+      </p>
+    </div>
+
+    <div class="container">
+      <h2>Send Us a Message</h2>
+      <p>Have suggestions, ideas, or feedback? We’d love to hear from you!</p>
+      <form id="contactForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+
+        <button type="submit" class="btn-send">Send Message</button>
+      </form>
+      <p id="formResponse" class="response"></p>
+    </div>
+
+    <div class="container contact-info">
+      <h2>Contact Information</h2>
+      <p>📞 Phone: +62 812-3456-7890</p>
+      <p>📷 Instagram: <a href="https://instagram.com/exploreurope" target="_blank">@exploreurope</a></p>
+      <p>💌 Email: exploreurope@gmail.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; By Ell36</p>
+  </footer>
+
+  <script>
+    // Simple form handler (you can replace this with EmailJS later)
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("formResponse").textContent = "Thank you! Your message has been sent successfully.";
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
