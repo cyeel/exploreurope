@@ -1,90 +1,163 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exploreurope</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
+
 <body>
   <!-- NAVBAR -->
   <header>
-  <nav class="navbar">
-    <h1 class="logo">
-      <a href="index.html"><img src="img/logo.png" alt="Logo Exploreurope" class="logo-img"></a>
-      Exploreurope
-    </h1>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Beranda</a></li>
-      <li><a href="events.html">Acara & Festival</a></li>
-      <li><a href="itinerary.html">Rencana Perjalanan</a></li>
-      <li><a href="contact.html">Kontak</a></li>
-    </ul>
-    <div class="lang-toggle">
-      <a href="index.html" class="active">ID</a> | 
-      <a href="index-en.html">EN</a>
-    </div>
-  </nav>
-</header>
+    <nav class="navbar">
+      <h1 class="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Logo Exploreurope" class="logo-img"></a>
+        Exploreurope
+      </h1>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="events.html">Acara dan Festival</a></li>
+        <li><a href="itinerary.html">Rencana Perjalanan</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+      <div class="lang-toggle">
+        <a href="index.html" class="active">ID</a> |
+        <a href="index-en.html">EN</a>
+      </div>
+    </nav>
+  </header>
 
-
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero">
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="vid/europe.mp4" type="video/mp4">
-  </video>
-  <div class="hero-content">
-    <h1>Jelajahi Keindahan Eropa</h1>
-    <p>Destinasi terbaik pilihan kami!</p>
-  </div>
-</section>
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="vid/europe.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>Jelajahi Keindahan Eropa</h1>
+      <p>Destinasi pilihan terbaik kami!</p>
+    </div>
+  </section>
+
+  <!-- TOP 5 YOUTUBE VIDEOS -->
+  <section class="videos">
+    <h2>5 Video Perjalanan YouTube Terbaik</h2><br>
+    <div class="swiper video-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <iframe src="https://www.youtube.com/embed/jUep3sqe35o" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="swiper-slide">
+          <iframe src="https://www.youtube.com/embed/2Z4m4lnjxkY" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="swiper-slide">
+          <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="swiper-slide">
+          <iframe src="https://www.youtube.com/embed/MKp30CzVzJg" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="swiper-slide">
+          <iframe src="https://www.youtube.com/embed/Rv2kHxH2m8Y" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
 
   <!-- DESTINATION HIGHLIGHTS -->
   <section class="destinations">
     <h2>5 Destinasi Terbaik</h2><br>
+    <div class="swiper destination-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="paris.html"><img src="img/paris.jpg" alt="Paris, Prancis"></a>
+          <h3>Paris, Prancis</h3>
+        </div>
+        <div class="swiper-slide">
+          <a href="roma.html"><img src="img/rome.jpg" alt="Roma, Italia"></a>
+          <h3>Roma, Italia</h3>
+        </div>
+        <div class="swiper-slide">
+          <a href="amsterdam.html"><img src="img/amsterdem.jpg" alt="Amsterdam, Belanda"></a>
+          <h3>Amsterdam, Belanda</h3>
+        </div>
+        <div class="swiper-slide">
+          <a href="barcelona.html"><img src="img/barcelona.webp" alt="Barcelona, Spanyol"></a>
+          <h3>Barcelona, Spanyol</h3>
+        </div>
+        <div class="swiper-slide">
+          <a href="zurich.html"><img src="img/zurich.jpg" alt="Zurich, Swiss"></a>
+          <h3>Zurich, Swiss</h3>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
 
-    <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <a href="paris.html"><img src="img/paris.jpg" alt="Paris, France"></a>
-        <h3>Paris, Prancis</h3>
+  <!-- POPULAR EXPERIENCES -->
+  <section class="experiences">
+    <h2>Pengalaman Populer</h2>
+    <div class="exp-grid">
+      <div class="exp-item">
+        <img src="img/gondolaride.jpg" alt="Naik Gondola di Venesia">
+        <h4>Naik Gondola di Venesia</h4>
       </div>
-      <div class="swiper-slide">
-        <a href="roma.html"><img src="img/rome.jpg" alt="Rome, Italy"></a>
-        <h3>Roma, Italia</h3>
+      <div class="exp-item">
+        <img src="img/northern.jpg" alt="Cahaya Utara">
+        <h4>Berburu Cahaya Utara</h4>
       </div>
-      <div class="swiper-slide">
-        <a href="amsterdam.html"><img src="img/amsterdem.jpg" alt="Amsterdam, Netherlands"></a>
-        <h3>Amsterdam, Belanda</h3>
+      <div class="exp-item">
+        <img src="img/eiffel.jpg" alt="Menara Eiffel">
+        <h4>Naik ke Menara Eiffel</h4>
       </div>
-      <div class="swiper-slide">
-        <a href="barcelona.html"><img src="img/barcelona.webp" alt="Barcelona, Spain"></a>
-        <h3>Barcelona, Spanyol</h3>
-      </div>
-      <div class="swiper-slide">
-        <a href="zurich.html"><img src="img/zurich.jpg" alt="Zurich, Switzerland"></a>
-        <h3>Zurich, Swizz</h3>
+      <div class="exp-item">
+        <img src="img/swissalps.jpg" alt="Pegunungan Alpen Swiss">
+        <h4>Mendaki di Pegunungan Alpen Swiss</h4>
       </div>
     </div>
+  </section>
 
-    <!-- Tombol navigasi -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</section>
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <h2>Testimoni Wisatawan</h2><br>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <p>“Exploreurope membuat bulan madu kami di Paris tak terlupakan!”</p>
+        <h4>- Anna & Leo</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Rencana perjalanan dan tipsnya sangat membantu! Sangat direkomendasikan.”</p>
+        <h4>- David S.</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Panduan mereka membantu kami menemukan tempat tersembunyi di Roma.”</p>
+        <h4>- Maria L.</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <h2>Berlangganan Buletin Kami</h2>
+    <p>Dapatkan tips perjalanan, promo, dan ide destinasi terbaru!</p>
+    <form>
+      <input type="email" placeholder="Masukkan email kamu" required>
+      <button type="submit">Berlangganan</button>
+    </form>
+  </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; oleh Ell36</p>
+    <p>&copy; Oleh Ell36</p>
   </footer>
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
   <script src="js/script.js"></script>
 </body>
 </html>
